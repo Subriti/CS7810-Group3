@@ -96,11 +96,6 @@ Thus, the CS Research Knowledge Graph is both intellectually challenging and soc
    - Accessed: September 30, 2025  
 
 
-2. **arXiv API** – The full, machine-readable arXiv dataset (article titles, authors, categories, abstracts).  
-   - Source: https://arxiv.org/help/api/  
-   - Accessed: September 30, 2025  
-
-
 3. **US NSF Award Search Database** – Funding data for AI-related research projects.  
    - Source: https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=artificial+intelligence
    - Accessed: September 30, 2025  
@@ -109,8 +104,6 @@ Thus, the CS Research Knowledge Graph is both intellectually challenging and soc
 4. **USPTO Patent Database** – AI-related patents with inventors and institutions.  
    - Source: https://data.uspto.gov/patent-file-wrapper/bulkdata/entire
    - Accessed: September 30, 2025  
-
-
 
 
 

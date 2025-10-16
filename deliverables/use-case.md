@@ -4,7 +4,18 @@
 ## Narrative  
 
 
-Research in the field of Computer Science is one of the fastest-growing fields of science and technology, producing thousands of papers, patents, and grants each year. However, the information about this research is distributed across diverse platforms such as DBLP, arXiv, NSF award databases, and USPTO patent repositories. This fragmentation creates challenges for researchers, funding agencies, and policymakers who need to understand evolving trends, identify leading institutions, and explore collaboration and funding patterns.  
+Research in the field of Computer Science is one of the fastest-growing fields of science and technology, producing thousands of papers, patents, and grants each year. However, the information about this research is distributed across diverse platforms such as DBLP, NSF award databases, and USPTO patent repositories. This fragmentation creates challenges for researchers, funding agencies, students and policymakers who need to understand evolving trends, identify leading institutions, and explore collaboration and funding patterns. 
+
+
+This Computer Science Research Knowledge Graph aims to integrate these three datasets into a unified semantic structure that represents the cycle of research — from funding → publications → innovation. By linking these sources, the graph will enable advanced analysis of how ideas spread, merge, and evolve across time and disciplines.
+
+This project not only integrates data to model the dynamics of scientific progress but also leans towards:
+
+Discovering the connections between papers – measuring conceptual similarity between research works.
+
+Velocity of research – tracking how quickly research areas evolve, how topics emerge, and how innovations follow funding or publication.
+
+Topic hierarchy – building a structured ontology of computer science domains (e.g., AI → Machine Learning → Deep Learning → Large Language Models), allowing researchers to navigate and reason about field evolution.
 
 
 The **primary stakeholders** for this use-case are researchers, funding agencies, policymakers, industry leaders, and educators.  
@@ -13,76 +24,52 @@ The **primary stakeholders** for this use-case are researchers, funding agencies
 - **Researchers** seek to identify emerging subfields, find potential collaborators, and track influential publications.  
 - **Funding agencies** NSF and DARPA want to evaluate the impact of their grants, compare funding across CS subfields (e.g., NLP vs. Computer Vision), and optimize future investments.  
 - **Policymakers and industry leaders** need to monitor the trajectory of CS technologies to inform regulations, national strategies, and innovation investments.  
-- **Educators and students** can use the graph to explore the landscape of subfields in CS, locate relevant datasets, and study collaboration patterns.  
+- **Educators and students** can use the graph to explore the landscape of subfields in CS, visualize topic hierarchies and understand how concepts connect over time..  
 
 
-Building a **Knowledge Graph (KG)** for the field of research in CS is important because it enables the integration of heterogeneous data sources into a single semantic structure. This makes it possible to connect research papers, authors, institutions, patents, grants, and topics, allowing complex queries such as:  
-- *“Which universities publish the most on Large Language Models?”*  
-- *“What are the fastest-growing AI subfields in the last 5 years?”*  
-- *“How much NSF funding has gone into NLP versus Computer Vision research?”*  
 
+A **Traditional relational (tabular) database** cannot easily represent or traverse the complex, many-to-many relationships between grants, papers, patents, authors, and institutions. A Knowledge Graph (KG), using semantic web captures these relationships explicitly and supports reasoning over them. This enables rich, cross-domain queries such as:
 
-These insights would not be easily retrievable using isolated datasets.  
+“Which NSF-funded research areas led to the most patents within five years?”
+“What sequence of papers represents the evolution of deep learning?”
+“How close are NLP and Computer Vision research in conceptual space?”
 
-
-A **relational (tabular) database** is insufficient for this use-case because it enforces rigid schemas and lacks native support for relationships across multiple datasets. For example, linking an NSF grant to the papers it funded, the institutions that received it, and patents citing those papers requires traversing many-to-many relationships. A **Knowledge Graph**, however, naturally encodes these entities and relationships, supports reasoning via ontologies, and enables semantic queries with SPARQL. This flexibility allows researchers and decision-makers to extract actionable insights that would be extremely difficult or impossible in relational systems.  
-
-
-Thus, the CS Research Knowledge Graph is both intellectually challenging and societally impactful. It will integrate diverse datasets, model meaningful relationships, and provide a foundation for advanced analytics and visualization of AI research trends.  
-
+By modeling these semantic relationships, this KG can serve as a dynamic map of computer science research, showing the flow of ideas, collaborations, and innovations over time.
 
 ---
 
 
-## Competency Questions  
+## Competency Questions 
 
+1. Which NSF-funded projects resulted in the highest research and innovation velocity?
+Bridges Datasets: NSF, DBLP, USPTO
 
-1. What are the fastest-growing subfields in CS in the last 5 years?  
-*Bridges Datasets:* DBLP, arXiv  
+2. How does research vary across different CS subfields?
+Bridges Datasets: DBLP, NSF
 
+3. What is the conceptual distance between two research papers or subfields?
+Bridges Datasets: DBLP
 
-2. Which universities publish the most on Large Language Models (LLMs)?  
-*Bridges Datasets:* DBLP, arXiv, Institution metadata  
+4. Which institutions demonstrate the strongest link between funded research and patented outcomes?
+Bridges Datasets: NSF, DBLP, USPTO
 
+5. How much NSF funding has gone to NLP compared to Computer Vision research?  
+*Bridges Datasets:* NSF Awards, DBLP  
 
-3. Which researchers collaborate most frequently across different AI subfields?  
-*Bridges Datasets:* DBLP, arXiv
+6. Which AI patents cite academic research papers, and which institutions developed them?
+*Bridges Datasets:* USPTO, DBLP
 
-
-4. How much NSF funding has gone to NLP compared to Computer Vision research?  
-*Bridges Datasets:* NSF Awards, DBLP, arXiv  
-
-
-5. Which AI patents cite academic research papers, and which institutions developed them?
-*Bridges Datasets:* USPTO.org, DBLP, arXiv, Institution metadata  
-
-
-6. Which authors frequently publish in both academic venues (conferences/journals) and file patents?  
-*Bridges Datasets:* DBLP, arXiv, USPTO/Lens.org
-
-
-7. What are the top conferences and journals publishing AI/ML papers by volume?  
-*Bridges Datasets:* DBLP, arXiv  
-
+7. Which authors frequently publish in both academic venues (conferences/journals) and file patents?  
+*Bridges Datasets:* DBLP, USPTO
 
 8. Which institutions have received the most NSF grants related to AI research?  
-*Bridges Datasets:* NSF Awards, Institution metadata
+*Bridges Datasets:* NSF Awards, DBLP
 
+9. What hierarchical relationships exist among CS topics, and how do they evolve?
+Bridges Datasets: DBLP
 
-9. How has the volume of AI research papers evolved over time, broken down by subfield (e.g., NLP, Robotics, Computer Vision)?  
-*Bridges Datasets:* DBLP, arXiv
-
-
-10. What collaborations exist between academia and industry labs in AI research outputs?
-*Bridges Datasets:* DBLP, arXiv, Institution metadata
-
-
-11. Which research topics are most strongly connected to recent breakthroughs in generative AI?  
-*Bridges Datasets:* arXiv, DBLP  
-
-
-12. Which institutions or labs show the strongest cross-disciplinary collaborations in AI subfields?  
-*Bridges Datasets:* DBLP, arXiv, Institution metadata
+10. Which NSF-funded areas have produced patents most rapidly (shortest time lag)?
+Bridges Datasets: NSF, DBLP, USPTO
 
 
 ---

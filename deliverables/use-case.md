@@ -11,11 +11,11 @@ This Computer Science Research Knowledge Graph aims to integrate these three dat
 
 This project not only integrates data to model the dynamics of scientific progress but also leans towards:
 
-Discovering the connections between papers – measuring conceptual similarity between research works.
+Discovering the connections between papers – measuring conceptual similarity between research works and visualizing these trajectories as paths connecting topics, institutions, and researchers, enabling insights like “how the focus of AI research has shifted from expert systems to generative models over time. 
 
-Velocity of research – tracking how quickly research areas evolve, how topics emerge, and how innovations follow funding or publication.
+Innovation velocity- tracking how quickly research areas evolve, how topics emerge, and how innovations follow funding or publication. The rate at which new ideas move from research to innovation. This serves as a measurable indicator of how dynamically a subfield is advancing and how effectively research outputs are being transformed into real-world innovation. 
 
-Topic hierarchy – building a structured ontology of computer science domains (e.g., AI → Machine Learning → Deep Learning → Large Language Models), allowing researchers to navigate and reason about field evolution.
+Topic hierarchy – building a structured ontology of computer science domains (e.g., AI → Machine Learning → Deep Learning → Large Language Models), allowing researchers to navigate and reason about field evolution. 
 
 
 The **primary stakeholders** for this use-case are researchers, funding agencies, policymakers, industry leaders, and educators.  

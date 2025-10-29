@@ -1,4 +1,5 @@
-#Weekly Meeting Minutes (Oct 28, 2025) 
+#Weekly Meeting Minutes (Oct 28, 2025) :
+4:30- 5:50PM
 
 ##Agenda: 
 - Creation of individual knowledge graphs for each dataset.
@@ -19,4 +20,5 @@
 #Signatures: 
 - Sumanth Jampani
 - Subriti Aryal
+- Moses Raj Muddada
 

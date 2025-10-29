@@ -1,4 +1,4 @@
-Key Notions – CS Research Knowledge Graph
+
 * ResearchPaper
     * Rationale: Represents scholarly publications connecting authors, institutions, and funding sources. Central to tracking research output and innovation trends in computer science.
     * Connected Pattern: AcademicArticle (BIBO Ontology)

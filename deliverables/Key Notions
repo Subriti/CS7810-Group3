@@ -1,0 +1,41 @@
+Key Notions – CS Research Knowledge Graph
+* ResearchPaper
+    * Rationale: Represents scholarly publications connecting authors, institutions, and funding sources. Central to tracking research output and innovation trends in computer science.
+    * Connected Pattern: AcademicArticle (BIBO Ontology)
+    * Source Dataset(s): DBLP
+
+* Author
+    * Rationale: Represents individuals who produce research papers or patents. Enables analysis of collaboration networks and author productivity across domains.
+    * Connected Pattern: Person (FOAF Ontology)
+    * Source Dataset(s): DBLP, USPTO
+
+* Institution
+    * Rationale: Denotes universities, research organizations, and companies that publish papers, receive grants, or file patents. Essential for studying institutional collaboration and influence.
+    * Connected Pattern: Organization (FOAF/Schema.org)
+    * Source Dataset(s): DBLP, NSF, USPTO
+
+* FundingProject
+    * Rationale: Represents research projects funded by agencies like NSF. Links funding activities to resulting publications and patents.
+    * Connected Pattern: Activity (PROV Ontology - Funding Pattern)
+    * Source Dataset(s): NSF Awards
+
+* Patent
+    * Rationale: Captures technological innovations resulting from research projects. Links inventors and institutions to intellectual property outcomes.
+    * Connected Pattern: Patent (Schema.org)
+    * Source Dataset(s): USPTO
+
+* ResearchArea
+    * Rationale: Defines computer science subfields used to classify papers, grants, and patents. Acts as a controlled vocabulary for topic hierarchy.
+    * Connected Pattern: Concept (SKOS Ontology)
+    * Source Dataset(s): DBLP, NSF
+
+* Citation
+    * Rationale: Models the relationship between research papers, showing how knowledge evolves through references and influences.
+    * Connected Pattern: Citation (BIBO Ontology)
+    * Source Dataset(s): DBLP
+
+* Collaboration
+    * Rationale: Represents cooperative relationships between authors and institutions, helping identify key research partnerships and network structures.
+    * Connected Pattern: knows / wasAssociatedWith (FOAF, PROV Ontology)
+    * Source Dataset(s): DBLP, NSF
+

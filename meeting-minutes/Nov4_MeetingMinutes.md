@@ -1,4 +1,4 @@
-#Weekly Meeting Minutes (Nov 4, 2025) : 6:30- 7:50PM
+#Weekly Meeting Minutes (Nov 4, 2025) : 6:30- 8:00PM
 
 #Agenda:
 

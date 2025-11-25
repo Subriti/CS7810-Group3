@@ -1,0 +1,1093 @@
+@prefix : <http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/> .
+
+<http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/PerformsPrincipalInvestigator
+:PerformsPrincipalInvestigator rdf:type owl:ObjectProperty ;
+                               rdfs:domain :Person ;
+                               rdfs:range :PrincipalInvestigator .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/affiliatedWith
+:affiliatedWith rdf:type owl:ObjectProperty ;
+                rdfs:domain :Author ,
+                            :PrincipalInvestigator ;
+                rdfs:range :AwardeeOrganization ,
+                           :Institution .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/atPlace
+:atPlace rdf:type owl:ObjectProperty ;
+         rdfs:domain :SpatiotemporalExtent ;
+         rdfs:range :Place .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/employs
+:employs rdf:type owl:ObjectProperty ;
+         rdfs:domain :Institution ;
+         rdfs:range :Person .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasAddress
+:hasAddress rdf:type owl:ObjectProperty ;
+            rdfs:domain :Person ,
+                        :Place ;
+            rdfs:range :Address ,
+                       :HasAddress .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasAddressLineOne
+:hasAddressLineOne rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Address ;
+                   rdfs:range :AddressLineOne .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasAmendmentDate
+:hasAmendmentDate rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Date ;
+                  rdfs:range :AmendmentDate .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasApplicant
+:hasApplicant rdf:type owl:ObjectProperty ;
+              rdfs:domain :PatentApplication ;
+              rdfs:range :Applicant .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasApplicationMetadata
+:hasApplicationMetadata rdf:type owl:ObjectProperty ;
+                        rdfs:domain :PatentApplication ;
+                        rdfs:range :ApplicationMetadata .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasApplicationNumber
+:hasApplicationNumber rdf:type owl:ObjectProperty ;
+                      rdfs:domain :ApplicationMetadata ;
+                      rdfs:range :ApplicationNumberText .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasAwardInstrument
+:hasAwardInstrument rdf:type owl:ObjectProperty ;
+                    rdfs:domain :AwardedGrant ;
+                    rdfs:range :AwardInstrument .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasCity
+:hasCity rdf:type owl:ObjectProperty ;
+         rdfs:domain :Address ;
+         rdfs:range :City .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasCountryCode
+:hasCountryCode rdf:type owl:ObjectProperty ;
+                rdfs:domain :Address ;
+                rdfs:range :CountryCode .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasCountryName
+:hasCountryName rdf:type owl:ObjectProperty ;
+                rdfs:domain :Address ;
+                rdfs:range :CountryName .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasDate
+:hasDate rdf:type owl:ObjectProperty ;
+         rdfs:domain :AwardedGrant ,
+                     :SpatiotemporalExtent ;
+         rdfs:range :Date .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasEvent
+:hasEvent rdf:type owl:ObjectProperty ;
+          rdfs:domain :PatentGrantEvent ,
+                      :PublicationEvent ;
+          rdfs:range :Event .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasFileCreateDateTime
+:hasFileCreateDateTime rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Metadata ;
+                       rdfs:range :FileCreateDateTime .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasFileURI
+:hasFileURI rdf:type owl:ObjectProperty ;
+            rdfs:domain :Metadata ;
+            rdfs:range :FileURI .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasFilingDate
+:hasFilingDate rdf:type owl:ObjectProperty ;
+               rdfs:domain :ApplicationMetadata ;
+               rdfs:range :FilingDate .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasFix
+:hasFix rdf:type owl:ObjectProperty ;
+        rdfs:domain :Trajectory ;
+        rdfs:range :Fix .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasGrantDate
+:hasGrantDate rdf:type owl:ObjectProperty ;
+              rdfs:domain :Patent ;
+              rdfs:range :GrantDate .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasGrantEvent
+:hasGrantEvent rdf:type owl:ObjectProperty ;
+               rdfs:domain :PatentApplication ;
+               rdfs:range :PatentGrantEvent .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasInventionTitle
+:hasInventionTitle rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Patent ;
+                   rdfs:range :InventionTitle .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasInventor
+:hasInventor rdf:type owl:ObjectProperty ;
+             rdfs:domain :PatentApplication ;
+             rdfs:range :Inventor .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasKeyword
+:hasKeyword rdf:type owl:ObjectProperty ;
+            rdfs:domain :Paper ;
+            rdfs:range :Topic .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasLastDate
+:hasLastDate rdf:type owl:ObjectProperty ;
+             rdfs:domain :Date ;
+             rdfs:range :LastDate .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasLegalStatus
+:hasLegalStatus rdf:type owl:ObjectProperty ;
+                rdfs:domain :Patent ;
+                rdfs:range :PublicationCategoryBag .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasMetadata
+:hasMetadata rdf:type owl:ObjectProperty ;
+             rdfs:domain :ApplicationMetadata ,
+                         :PatentGrantMetadata ,
+                         :PublicationMetadata ;
+             rdfs:range :Metadata .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasName
+:hasName rdf:type owl:ObjectProperty ;
+         rdfs:domain :Person ;
+         rdfs:range :HasName .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasNameLineOne
+:hasNameLineOne rdf:type owl:ObjectProperty ;
+                rdfs:domain :Address ;
+                rdfs:range :NameLineOne .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasOutput
+:hasOutput rdf:type owl:ObjectProperty ;
+           rdfs:domain :PatentGrantEvent ;
+           rdfs:range :Patent .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasPatentGrantMetadata
+:hasPatentGrantMetadata rdf:type owl:ObjectProperty ;
+                        rdfs:domain :PatentGrantEvent ;
+                        rdfs:range :PatentGrantMetadata .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasPatentNumber
+:hasPatentNumber rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Patent ;
+                 rdfs:range :PatentNumber .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasPostalCode
+:hasPostalCode rdf:type owl:ObjectProperty ;
+               rdfs:domain :Address ;
+               rdfs:range :PostalCode .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasPrincipalInvestigator
+:hasPrincipalInvestigator rdf:type owl:ObjectProperty ;
+                          rdfs:domain :AwardedGrant ;
+                          rdfs:range :PrincipalInvestigator .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasProductIdentifier
+:hasProductIdentifier rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Metadata ;
+                      rdfs:range :ProductIdentifier .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasPublicationEvent
+:hasPublicationEvent rdf:type owl:ObjectProperty ;
+                     rdfs:domain :PatentApplication ;
+                     rdfs:range :PublicationEvent .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasPublicationMetadata
+:hasPublicationMetadata rdf:type owl:ObjectProperty ;
+                        rdfs:domain :PublicationEvent ;
+                        rdfs:range :PublicationMetadata .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasRegionName
+:hasRegionName rdf:type owl:ObjectProperty ;
+               rdfs:domain :Address ;
+               rdfs:range :RegionName .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasSpatialTemporalExtent
+:hasSpatialTemporalExtent rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Fix ;
+                          rdfs:range :SpatiotemporalExtent .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasStartDate
+:hasStartDate rdf:type owl:ObjectProperty ;
+              rdfs:domain :Date ;
+              rdfs:range :StartDate .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasTitle
+:hasTitle rdf:type owl:ObjectProperty ;
+          rdfs:domain :AwardedGrant ,
+                      :Paper ;
+          rdfs:range :Title .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasTopic
+:hasTopic rdf:type owl:ObjectProperty ;
+          rdfs:domain :Trajectory ;
+          rdfs:range :Topic .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasUrl
+:hasUrl rdf:type owl:ObjectProperty ;
+        rdfs:domain :Paper ;
+        rdfs:range :Url .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasXmlFileName
+:hasXmlFileName rdf:type owl:ObjectProperty ;
+                rdfs:domain :Metadata ;
+                rdfs:range :XmlFileName .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hasZipFileName
+:hasZipFileName rdf:type owl:ObjectProperty ;
+                rdfs:domain :Metadata ;
+                rdfs:range :ZipFileName .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/heldAt
+:heldAt rdf:type owl:ObjectProperty ;
+        rdfs:domain :Conference ;
+        rdfs:range :Venue .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/hosts
+:hosts rdf:type owl:ObjectProperty ;
+       rdfs:domain :Institution ;
+       rdfs:range :Conference .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/influencesFix
+:influencesFix rdf:type owl:ObjectProperty ;
+               rdfs:domain :Patent ;
+               rdfs:range :Fix .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/isApplicant
+:isApplicant rdf:type owl:ObjectProperty ;
+             rdfs:domain :Person ;
+             rdfs:range :Applicant .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/isAttorney
+:isAttorney rdf:type owl:ObjectProperty ;
+            rdfs:domain :Person ;
+            rdfs:range :Attorney .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/manages
+:manages rdf:type owl:ObjectProperty ;
+         rdfs:domain :NSFOrganization ;
+         rdfs:range :AwardedGrant .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/nextFix
+:nextFix rdf:type owl:ObjectProperty ;
+         rdfs:domain :Fix ;
+         rdfs:range :Fix .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/partOf
+:partOf rdf:type owl:ObjectProperty ;
+        rdfs:domain :NSFOrganization ;
+        rdfs:range :NSFDirectorate .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/participatesInDataTransformation
+:participatesInDataTransformation rdf:type owl:ObjectProperty ;
+                                  rdfs:domain :InventionTitle ;
+                                  rdfs:range :DataTransformation .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/performsAgentRole
+:performsAgentRole rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Person ;
+                   rdfs:range :Inventor .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/performsFix
+:performsFix rdf:type owl:ObjectProperty ;
+             rdfs:domain :Paper ;
+             rdfs:range :Fix .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/performsOutputRole
+:performsOutputRole rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Algorithm ;
+                    rdfs:range :Topic .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/performsRole
+:performsRole rdf:type owl:ObjectProperty ;
+              rdfs:domain :Person ;
+              rdfs:range :Author .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/performsRoleOfFix
+:performsRoleOfFix rdf:type owl:ObjectProperty ;
+                   rdfs:domain :AwardedGrant ;
+                   rdfs:range :Fix .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/providesOutputRole
+:providesOutputRole rdf:type owl:ObjectProperty ;
+                    rdfs:domain :DataTransformation ;
+                    rdfs:range :Topic .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/publishedIn
+:publishedIn rdf:type owl:ObjectProperty ;
+             rdfs:domain :Paper ;
+             rdfs:range :Year .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/receives
+:receives rdf:type owl:ObjectProperty ;
+          rdfs:domain :AwardeeOrganization ;
+          rdfs:range :AwardedGrant .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/represents
+:represents rdf:type owl:ObjectProperty ;
+            rdfs:domain :Attorney ;
+            rdfs:range :Inventor .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/resultsFrom
+:resultsFrom rdf:type owl:ObjectProperty ;
+             rdfs:domain :Patent ;
+             rdfs:range :PatentApplication .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/to
+:to rdf:type owl:ObjectProperty ;
+    rdfs:domain :EndingFix ,
+                :StartingFix ;
+    rdfs:range :Fix .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/uses
+:uses rdf:type owl:ObjectProperty ;
+      rdfs:domain :DataTransformation ;
+      rdfs:range :Algorithm .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/writes
+:writes rdf:type owl:ObjectProperty ;
+        rdfs:domain :Author ;
+        rdfs:range :Paper .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#address
+:address rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Person ;
+         rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#addressLineOne
+:addressLineOne rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Address ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#applicationNumber
+:applicationNumber rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :PatentApplication ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#city
+:city rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Address ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#countryCode
+:countryCode rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Address ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#countryName
+:countryName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Address ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#fileCreateDateTime
+:fileCreateDateTime rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :PatentApplication ;
+                    rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#fileURI
+:fileURI rdf:type owl:DatatypeProperty ;
+         rdfs:domain :PatentApplication ;
+         rdfs:range xsd:anyURI .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#filingDate
+:filingDate rdf:type owl:DatatypeProperty ;
+            rdfs:domain :PatentApplication ;
+            rdfs:range xsd:dateTime .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#nameLineOne
+:nameLineOne rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Address ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#postalCode
+:postalCode rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Address ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#productIdentifier
+:productIdentifier rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :PatentApplication ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#regionName
+:regionName rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Address ;
+            rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#xmlFileName
+:xmlFileName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :PatentApplication ;
+             rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project#zipFileName
+:zipFileName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :PatentApplication ;
+             rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Address
+:Address rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasAddressLineOne ;
+                           owl:someValuesFrom :AddressLineOne
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCity ;
+                           owl:someValuesFrom :City
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCountryCode ;
+                           owl:someValuesFrom :CountryCode
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasCountryName ;
+                           owl:someValuesFrom :CountryName
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasNameLineOne ;
+                           owl:someValuesFrom :NameLineOne
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasPostalCode ;
+                           owl:someValuesFrom :PostalCode
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasRegionName ;
+                           owl:someValuesFrom :RegionName
+                         ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/AddressLineOne
+:AddressLineOne rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Algorithm
+:Algorithm rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :providesOutputRole ;
+                             owl:someValuesFrom :Topic
+                           ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/AmendmentDate
+:AmendmentDate rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Applicant
+:Applicant rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/ApplicationMetadata
+:ApplicationMetadata rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasApplicationNumber ;
+                                       owl:someValuesFrom :ApplicationNumberText
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasFilingDate ;
+                                       owl:someValuesFrom :FilingDate
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasMetadata ;
+                                       owl:someValuesFrom :Metadata
+                                     ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/ApplicationNumberText
+:ApplicationNumberText rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Attorney
+:Attorney rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :represents ;
+                            owl:someValuesFrom :Inventor
+                          ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Author
+:Author rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :affiliatedWith ;
+                          owl:someValuesFrom :Institution
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :writes ;
+                          owl:someValuesFrom :Paper
+                        ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/AwardInstrument
+:AwardInstrument rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/AwardedGrant
+:AwardedGrant rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasAwardInstrument ;
+                                owl:someValuesFrom :AwardInstrument
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasDate ;
+                                owl:someValuesFrom :Date
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasPrincipalInvestigator ;
+                                owl:someValuesFrom :PrincipalInvestigator
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTitle ;
+                                owl:someValuesFrom :Title
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :performsRoleOfFix ;
+                                owl:someValuesFrom :Fix
+                              ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/AwardeeOrganization
+:AwardeeOrganization rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :receives ;
+                                       owl:someValuesFrom :AwardedGrant
+                                     ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/City
+:City rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Conference
+:Conference rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :heldAt ;
+                              owl:someValuesFrom :Venue
+                            ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/CountryCode
+:CountryCode rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/CountryName
+:CountryName rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/DataTransformation
+:DataTransformation rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty :providesOutputRole ;
+                                      owl:someValuesFrom :Topic
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :uses ;
+                                      owl:someValuesFrom :Algorithm
+                                    ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Date
+:Date rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasAmendmentDate ;
+                        owl:someValuesFrom :AmendmentDate
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasLastDate ;
+                        owl:someValuesFrom :LastDate
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasStartDate ;
+                        owl:someValuesFrom :StartDate
+                      ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/EndingFix
+:EndingFix rdf:type owl:Class ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :to ;
+                             owl:someValuesFrom :Fix
+                           ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasSpatialTemporalExtent ;
+                         owl:someValuesFrom :SpatiotemporalExtent
+                       ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/FileCreateDateTime
+:FileCreateDateTime rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/FileURI
+:FileURI rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/FilingDate
+:FilingDate rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Fix
+:Fix rdf:type owl:Class ;
+     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasSpatialTemporalExtent ;
+                       owl:someValuesFrom :SpatiotemporalExtent
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :nextFix ;
+                       owl:someValuesFrom :Fix
+                     ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/GrantDate
+:GrantDate rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/HasAddress
+:HasAddress rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/HasName
+:HasName rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Institution
+:Institution rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :employs ;
+                               owl:someValuesFrom :Person
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hosts ;
+                               owl:someValuesFrom :Conference
+                             ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/InventionTitle
+:InventionTitle rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :participatesInDataTransformation ;
+                                  owl:someValuesFrom :DataTransformation
+                                ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Inventor
+:Inventor rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/LastDate
+:LastDate rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Metadata
+:Metadata rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasFileCreateDateTime ;
+                            owl:someValuesFrom :FileCreateDateTime
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasFileURI ;
+                            owl:someValuesFrom :FileURI
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasProductIdentifier ;
+                            owl:someValuesFrom :ProductIdentifier
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasXmlFileName ;
+                            owl:someValuesFrom :XmlFileName
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasZipFileName ;
+                            owl:someValuesFrom :ZipFileName
+                          ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/NSFDirectorate
+:NSFDirectorate rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/NSFOrganization
+:NSFOrganization rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :manages ;
+                                   owl:someValuesFrom :AwardedGrant
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :partOf ;
+                                   owl:someValuesFrom :NSFDirectorate
+                                 ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/NameLineOne
+:NameLineOne rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Paper
+:Paper rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasKeyword ;
+                         owl:someValuesFrom :Topic
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTitle ;
+                         owl:someValuesFrom :Title
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasUrl ;
+                         owl:someValuesFrom :Url
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :performsFix ;
+                         owl:someValuesFrom :Fix
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :publishedIn ;
+                         owl:someValuesFrom :Year
+                       ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Patent
+:Patent rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasGrantDate ;
+                          owl:someValuesFrom :GrantDate
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasInventionTitle ;
+                          owl:someValuesFrom :InventionTitle
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasLegalStatus ;
+                          owl:someValuesFrom :PublicationCategoryBag
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasPatentNumber ;
+                          owl:someValuesFrom :PatentNumber
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :influencesFix ;
+                          owl:someValuesFrom :Fix
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :resultsFrom ;
+                          owl:someValuesFrom :PatentApplication
+                        ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/PatentApplication
+:PatentApplication rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasApplicant ;
+                                     owl:someValuesFrom :Applicant
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasApplicationMetadata ;
+                                     owl:someValuesFrom :ApplicationMetadata
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasGrantEvent ;
+                                     owl:someValuesFrom :PatentGrantEvent
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasInventor ;
+                                     owl:someValuesFrom :Inventor
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasPublicationEvent ;
+                                     owl:someValuesFrom :PublicationEvent
+                                   ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/PatentGrantEvent
+:PatentGrantEvent rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasEvent ;
+                                    owl:someValuesFrom :Event
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasOutput ;
+                                    owl:someValuesFrom :Patent
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasPatentGrantMetadata ;
+                                    owl:someValuesFrom :PatentGrantMetadata
+                                  ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/PatentGrantMetadata
+:PatentGrantMetadata rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasMetadata ;
+                                       owl:someValuesFrom :Metadata
+                                     ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/PatentNumber
+:PatentNumber rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :PerformsPrincipalInvestigator ;
+                          owl:someValuesFrom :PrincipalInvestigator
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasAddress ;
+                          owl:someValuesFrom :HasAddress
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasName ;
+                          owl:someValuesFrom :HasName
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :isApplicant ;
+                          owl:someValuesFrom :Applicant
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :isAttorney ;
+                          owl:someValuesFrom :Attorney
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :performsAgentRole ;
+                          owl:someValuesFrom :Inventor
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :performsRole ;
+                          owl:someValuesFrom :Author
+                        ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Place
+:Place rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasAddress ;
+                         owl:someValuesFrom :Address
+                       ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/PostalCode
+:PostalCode rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/PrincipalInvestigator
+:PrincipalInvestigator rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty :affiliatedWith ;
+                                         owl:someValuesFrom :AwardeeOrganization
+                                       ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/ProductIdentifier
+:ProductIdentifier rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/PublicationCategoryBag
+:PublicationCategoryBag rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/PublicationEvent
+:PublicationEvent rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasEvent ;
+                                    owl:someValuesFrom :Event
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasPublicationMetadata ;
+                                    owl:someValuesFrom :PublicationMetadata
+                                  ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/PublicationMetadata
+:PublicationMetadata rdf:type owl:Class ;
+                     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasMetadata ;
+                                       owl:someValuesFrom :Metadata
+                                     ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/RegionName
+:RegionName rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/SpatiotemporalExtent
+:SpatiotemporalExtent rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty :atPlace ;
+                                        owl:someValuesFrom :Place
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasDate ;
+                                        owl:someValuesFrom :Date
+                                      ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/StartDate
+:StartDate rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/StartingFix
+:StartingFix rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :to ;
+                               owl:someValuesFrom :Fix
+                             ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Title
+:Title rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Topic
+:Topic rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTopic ;
+                         owl:someValuesFrom :Trajectory
+                       ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Trajectory
+:Trajectory rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasFix ;
+                              owl:someValuesFrom :Fix
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasTopic ;
+                              owl:someValuesFrom :Topic
+                            ] .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Url
+:Url rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Venue
+:Venue rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/XmlFileName
+:XmlFileName rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/Year
+:Year rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/sumanthjampani/ontologies/2025/10/Project/ZipFileName
+:ZipFileName rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
